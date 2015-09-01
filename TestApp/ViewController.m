@@ -10,18 +10,33 @@
 
 @interface ViewController ()
 
+@property (nonatomic, strong) NSString *username;
+@property (nonatomic, strong) NSString *password;
+@property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
+@property (weak, nonatomic) IBOutlet UILabel *messageLabel;
+
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.username = @"someuser";
+    self.password = @"password";
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)loginPressed:(id)sender {
+    BOOL userMatch = [self.username isEqualToString:[self.usernameTextField text]];
+    BOOL passwordMatch = [self.password isEqualToString:[self.passwordTextField text]];
+    
+    if (userMatch && passwordMatch){
+        [self.messageLabel setText:@"Success!"];
+    } else {
+        [self.messageLabel setText:@"Incorect username or password!"];
+    }
+    
 }
 
 @end
