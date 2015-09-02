@@ -26,9 +26,9 @@
     BOOL passwordMatch = [self.password isEqualToString:[self.passwordTextField text]];
     
     if (userMatch && passwordMatch){
-        [self.messageLabel setText:@"Success!"];
+        self.messageLabel.text = @"Success!";
     } else {
-        [self.messageLabel setText:@"Incorect username or password!"];
+        self.messageLabel.text = @"Incorect username or password!";
     }
     
 }
