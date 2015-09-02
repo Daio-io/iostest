@@ -18,7 +18,6 @@
     [super viewDidLoad];
     self.username = @"someuser";
     self.password = @"password";
-    
 }
 
 - (IBAction)loginPressed:(id)sender {
@@ -31,6 +30,10 @@
         self.messageLabel.text = @"Incorect username or password!";
     }
     
+}
+
+- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self.view endEditing:YES];
 }
 
 @end
