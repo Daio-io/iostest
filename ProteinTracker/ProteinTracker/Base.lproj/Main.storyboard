@@ -3,6 +3,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -23,9 +24,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="16" y="57" width="42" height="20.5"/>
-                                </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goal:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vSm-kW-g5K">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -40,8 +38,7 @@
                                         <exclude reference="3xb-NZ-dgq"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="16" y="86" width="41" height="21"/>
+                                <variation key="widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="3xb-NZ-dgq"/>
                                     </mask>
@@ -62,8 +59,7 @@
                                         <exclude reference="fvG-9u-NN5"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="65" y="57" width="117" height="21"/>
+                                <variation key="widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="RNs-NT-GVc"/>
                                         <include reference="fvG-9u-NN5"/>
@@ -113,9 +109,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="65" y="86" width="117" height="21"/>
-                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -152,15 +145,15 @@
                             <mask key="constraints">
                                 <exclude reference="HGc-03-hIP"/>
                                 <exclude reference="qcS-dz-Eay"/>
-                                <exclude reference="P0q-E9-Vii"/>
-                                <exclude reference="Qrq-7E-3Ad"/>
-                                <exclude reference="zlz-4n-iC5"/>
                                 <exclude reference="0Ok-vg-LS8"/>
                                 <exclude reference="BTl-MJ-RJ2"/>
                                 <exclude reference="PIA-xi-xjx"/>
                                 <exclude reference="iGF-vP-Qd9"/>
                                 <exclude reference="nyT-na-M90"/>
                                 <exclude reference="sGU-IA-8zc"/>
+                                <exclude reference="P0q-E9-Vii"/>
+                                <exclude reference="Qrq-7E-3Ad"/>
+                                <exclude reference="zlz-4n-iC5"/>
                                 <exclude reference="Hgh-Gt-1Kf"/>
                                 <exclude reference="S6j-vs-B6D"/>
                             </mask>
@@ -179,15 +172,15 @@
                             <mask key="constraints">
                                 <include reference="HGc-03-hIP"/>
                                 <include reference="qcS-dz-Eay"/>
-                                <include reference="P0q-E9-Vii"/>
-                                <include reference="Qrq-7E-3Ad"/>
-                                <include reference="zlz-4n-iC5"/>
                                 <include reference="0Ok-vg-LS8"/>
                                 <include reference="BTl-MJ-RJ2"/>
                                 <include reference="PIA-xi-xjx"/>
                                 <include reference="iGF-vP-Qd9"/>
                                 <include reference="nyT-na-M90"/>
                                 <include reference="sGU-IA-8zc"/>
+                                <include reference="P0q-E9-Vii"/>
+                                <include reference="Qrq-7E-3Ad"/>
+                                <include reference="zlz-4n-iC5"/>
                                 <include reference="Hgh-Gt-1Kf"/>
                                 <include reference="S6j-vs-B6D"/>
                             </mask>
@@ -213,6 +206,7 @@
                         <viewControllerLayoutGuide type="bottom" id="0z0-qB-0UG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Bgw-yZ-7NP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3LD-BB-RCO">
@@ -258,11 +252,11 @@
                                 <exclude reference="bHt-w1-XAy"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="dSK-En-Eko"/>
                                 <exclude reference="8ZR-Kt-aCD"/>
                                 <exclude reference="Eoy-EQ-fCP"/>
                                 <exclude reference="2Cc-dO-31U"/>
                                 <exclude reference="lWA-M7-xEf"/>
-                                <exclude reference="dSK-En-Eko"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -271,11 +265,11 @@
                                 <include reference="bHt-w1-XAy"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="dSK-En-Eko"/>
                                 <include reference="8ZR-Kt-aCD"/>
                                 <include reference="Eoy-EQ-fCP"/>
                                 <include reference="2Cc-dO-31U"/>
                                 <include reference="lWA-M7-xEf"/>
-                                <include reference="dSK-En-Eko"/>
                             </mask>
                         </variation>
                     </view>

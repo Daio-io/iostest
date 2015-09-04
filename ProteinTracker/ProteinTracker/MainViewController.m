@@ -24,6 +24,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    NSInteger goal = [[NSUserDefaults standardUserDefaults] integerForKey:@"goal"];
+    self.goalLabel.text = [NSString stringWithFormat:@"%ld", (long)goal];
+    
+    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+    [center addObserver:self selector:@selector(goalChanged:) name:NSUserDefaultsDidChangeNotification object:nil];
+    
+}
+
+- (void)goalChanged:(NSNotification *)notification {
+    NSUserDefaults *defaults = (NSUserDefaults *) [notification object];
+    
+    NSInteger goal = [defaults integerForKey:@"goal"];
+    self.goalLabel.text = [NSString stringWithFormat:@"%ld", (long)goal];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,6 +50,11 @@
     self.totalLabel.text = [NSString stringWithFormat:@"%d", total];
     
     [amountHistory addObject:[NSNumber numberWithInt:self.addAmountField.text.intValue]];
+    
+    if (total >= self.goalLabel.text.intValue) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success!" message:@"You reached your goal!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+    }
 }
 
 - (IBAction)unwindToMain:(UIStoryboardSegue *)segue{
